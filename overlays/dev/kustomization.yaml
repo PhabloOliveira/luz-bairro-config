@@ -11,12 +11,12 @@ resources:
 # Nao altere o formato delas: o pipeline as localiza por padrao de texto.
 images:
   - name: luz-bairro
-    newName: image-registry.openshift-image-registry.svc:5000/cicd-dev/luz-bairro
-    digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+    newName: image-registry.openshift-image-registry.svc:5000/frozo-dev/luz-bairro
+    digest: sha256:9f0e867d80db9db43a35b189b9604153a9efb676222335f4826693aa4f37a71c
 
 configMapGenerator:
   - name: luz-bairro-config
     behavior: merge
     literals:
       - APP_ENV=dev
-      - APP_VERSION=0000000
+      - APP_VERSION=2587512
