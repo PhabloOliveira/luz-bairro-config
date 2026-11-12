@@ -12,7 +12,7 @@ resources:
 images:
   - name: luz-bairro
     newName: image-registry.openshift-image-registry.svc:5000/frozo-dev/luz-bairro
-    digest: sha256:1731b582ac71b09ed5d1c5574e3b339ec13b00a56152bf9aab3ceb03b1fa2b85
+    digest: sha256:f4568977f73ea3afb1449df9a2fad51c381eee0a797bd3b28c758aeabc76df53
 
 configMapGenerator:
   - name: luz-bairro-config
