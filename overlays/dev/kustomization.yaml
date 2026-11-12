@@ -12,11 +12,11 @@ resources:
 images:
   - name: luz-bairro
     newName: image-registry.openshift-image-registry.svc:5000/frozo-dev/luz-bairro
-    digest: sha256:f4568977f73ea3afb1449df9a2fad51c381eee0a797bd3b28c758aeabc76df53
+    digest: sha256:ff65a0a20a0d042ef9184539b85f73dbfb50a8ddcac87673b59723d66a31426d
 
 configMapGenerator:
   - name: luz-bairro-config
     behavior: merge
     literals:
       - APP_ENV=dev
-      - APP_VERSION=b54d7f5
+      - APP_VERSION=69917fd
