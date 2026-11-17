@@ -2,18 +2,16 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # Ambiente de homologacao: usado apenas no Incidente D do Exercicio 9.
-# TODO(aluno, Incidente D): troque cicd-hml pelo seu projeto de homologacao ($HML_NS).
-namespace: $HML_NS
+namespace: frozo-hml
 
 resources:
   - ../../base
 
 # Como em producao, a imagem NAO e construida aqui: e a mesma imagem de dev, por digest.
-# TODO(aluno, Incidente D): em newName, troque cicd-dev pelo seu projeto de DESENVOLVIMENTO ($DEV_NS).
 # O digest e a versao sao copiados de dev por: bash scripts/promover.sh hml
 images:
   - name: luz-bairro
-    newName: $DEV_NS
+    newName: image-registry.openshift-image-registry.svc:5000/frozo-dev/luz-bairro
     digest: sha256:ff65a0a20a0d042ef9184539b85f73dbfb50a8ddcac87673b59723d66a31426d
 
 configMapGenerator:
